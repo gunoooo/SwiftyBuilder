@@ -1,6 +1,0 @@
-use_frameworks!
-target 'SwiftyBuilder_Tests' do
-  pod 'SwiftyBuilder', :path => '../'
-  
-  
-end
