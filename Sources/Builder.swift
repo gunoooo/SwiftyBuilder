@@ -42,7 +42,7 @@ public struct Builder<Base>: BuilderType {
 }
 
 extension Builder: AnyBuilderType where Base: Any {
-    /// It takes a reference key path as an argument and returns a closure.
+    /// It takes a key path as an argument and returns a closure.
     /// If Value is entered as the argument of the closure, the property is changed to the argument after copying.
     ///
     ///     let view = User()
