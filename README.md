@@ -66,6 +66,45 @@ let button = UIButton()
     .build()
 ```
 
+### Extension
+
+- before
+
+```swift
+let label = UILabel()
+    .builder
+    .font(.systemFont(ofSize: 10))
+    .numberOfLines(12)
+    .build()
+
+print(label.numberOfLines) // 12
+```
+
+- extension
+
+```swift
+extension Builder where Base: UILabel {
+    // custom
+    func size(_ value: CGFloat) -> Self {
+        return set(\.font, value: base.font.withSize(value))
+    }
+    
+    // intercept
+    func numberOfLines(_ value: Int) -> Self {
+        return set(\.numberOfLines, value: min(value, 10))
+    }
+}
+```
+```swift
+let label = UILabel()
+    .builder
+    .size(10)
+    .numberOfLines(12)
+    .build()
+
+print(label.numberOfLines) // 10
+```
+
 ### Custom Builder
 
 - declare
