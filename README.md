@@ -144,6 +144,7 @@ print(user.id!) // ID : user
 ## 👀 References
 
 https://github.com/devxoul/Then
+https://wilson-gramer-blog.github.io/posts/2020-02-23-using-dynamic-member-lookup-implement-builder-pattern.html
 
 ## License
 
